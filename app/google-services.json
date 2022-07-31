@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "486434284271",
+    "project_id": "noticias-9904a",
+    "storage_bucket": "noticias-9904a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:486434284271:android:a926595d91b7e4e3def11a",
+        "android_client_info": {
+          "package_name": "com.example.noticiaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "486434284271-qr2f0hgsk6g7olf991944quupbipjnj5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk8qZ6WBOUi87Z2T_Mp6DHfl33i-FQs9I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "486434284271-qr2f0hgsk6g7olf991944quupbipjnj5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

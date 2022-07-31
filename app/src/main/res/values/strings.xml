@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NoticiaAPP</string>
+    <string name="escreva_a_noticia">Escreva a noticia</string>
+    <string name="data">Data</string>
+    <string name="autor">Autor</string>
+    <string name="publicar">Publicar</string>
+</resources>
