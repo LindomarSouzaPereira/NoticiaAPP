@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun initializerAdapter(reciclerview: RecyclerView){
         reciclerview.layoutManager = LinearLayoutManager(this,RecyclerView.VERTICAL,false)
-        mAdapterNoticias = AdapterNoticias(this)
+        mAdapterNoticias = AdapterNoticias(mContext)
         recycleview.adapter = mAdapterNoticias
         reciclerview.addItemDecoration(
             DividerItemDecoration(this,DividerItemDecoration.VERTICAL)
