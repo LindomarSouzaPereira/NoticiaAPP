@@ -20,15 +20,15 @@ class PostActivity : AppCompatActivity() {
         binding = ActivityPostBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_post)
 
-        titulo= binding.editTitulo.findViewById(R.id.editTitulo)
-        noticia = binding.editNoticia.findViewById(R.id.editNoticia)
-        data= binding.editData.findViewById(R.id.editData)
-        autor= binding.editAutor.findViewById(R.id.editAutor)
-        publicar = binding.button.findViewById(R.id.button)
-        titulo.text = Shared.instance.noticiaSelecionada?.titulo
-        noticia.text = Shared.instance.noticiaSelecionada?.noticias
-        data.text = Shared.instance.noticiaSelecionada?.data
-        autor.text = Shared.instance.noticiaSelecionada?.autor
+        titulo= findViewById(R.id.editTitulo)
+        noticia = findViewById(R.id.editNoticia)
+        data= findViewById(R.id.editData)
+        autor= findViewById(R.id.editAutor)
+        publicar = findViewById(R.id.button)
+//        titulo.text = Shared.instance.noticiaSelecionada?.titulo
+//        noticia.text = Shared.instance.noticiaSelecionada?.noticias
+//        data.text = Shared.instance.noticiaSelecionada?.data
+//        autor.text = Shared.instance.noticiaSelecionada?.autor
 
         publicar.setOnClickListener {
             val titulo = titulo.text.toString()
@@ -39,7 +39,8 @@ class PostActivity : AppCompatActivity() {
             val nota= Noticia(titulo,noticia,data,autor)
 
             Shared.instance.noticiaLista.add(nota)
-            Toast.makeText(this, "Publicado com sucesso", Toast.LENGTH_SHORT).show()
+            print(Shared.instance.noticiaLista[0].titulo)
+            Toast.makeText(this, "" + Shared.instance.noticiaLista[0].titulo, Toast.LENGTH_SHORT).show()
         }
 
     }
