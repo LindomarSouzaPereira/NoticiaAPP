@@ -34,6 +34,10 @@ class MainActivity : AppCompatActivity() {
         reciclerview.addItemDecoration(
             DividerItemDecoration(this,DividerItemDecoration.VERTICAL)
         )
+
+        val noticias = Shared.instance.noticiaLista
+
+        mAdapterNoticias.setData(noticias)
     }
 
 

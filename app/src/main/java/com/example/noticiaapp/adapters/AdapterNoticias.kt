@@ -28,6 +28,15 @@ class AdapterNoticias(context: Context): RecyclerView.Adapter<AdapterNoticias.Vi
         return mListNoticias.size
     }
 
+    fun setData(listNoticias: MutableList<Noticia>){
+        mListNoticias.clear()
+        mListNoticias.addAll(listNoticias.toMutableList())
+        this.notifyDataSetChanged()
+    }
+
+    fun updateLayout(){
+        this.notifyDataSetChanged()
+    }
 
     // uma classe interna(ou seja dentro de outra classe)
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
