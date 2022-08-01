@@ -1,12 +1,16 @@
 package com.example.noticiaapp.adapters
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.example.noticiaapp.PostActivity
 import com.example.noticiaapp.R
+import com.example.noticiaapp.Shared
 import com.example.noticiaapp.model.Noticia
 
 class AdapterNoticias(context: Context): RecyclerView.Adapter<AdapterNoticias.ViewHolder>() {
@@ -22,6 +26,12 @@ class AdapterNoticias(context: Context): RecyclerView.Adapter<AdapterNoticias.Vi
         val position = holder.bindingAdapterPosition
         val noticia = mListNoticias[position]
         holder.title.text = noticia?.titulo
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(mContext, PostActivity::class.java)
+            Shared.instance.noticiaSelecionada = noticia
+            startActivity(mContext, intent, null)
+        }
     }
 
     override fun getItemCount(): Int {

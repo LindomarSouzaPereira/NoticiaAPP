@@ -14,6 +14,7 @@ class Shared {
     }
 
     var noticiaLista: MutableList<Noticia> = arrayListOf()
+    var noticiaSelecionada: Noticia? = Noticia("","","","")
 
 
 }
